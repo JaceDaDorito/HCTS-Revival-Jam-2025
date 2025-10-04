@@ -5,6 +5,30 @@
 [node name="Test2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 288.0
+offset_top = 13.0
+offset_right = 1265.0
+offset_bottom = 613.0
+rotation = -2.111009
+scale = Vector2(-1.914997, 7.833529)
+texture = ExtResource("1_utggn")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 13.0
+offset_right = 1265.0
+offset_bottom = 613.0
+rotation = -2.111009
+scale = Vector2(-1.839118, 16.33492)
+texture = ExtResource("1_utggn")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 91.84555
+offset_top = -15.717972
+offset_right = 1068.8456
+offset_bottom = 584.28204
+rotation = -2.111009
+scale = Vector2(-2.9701867, 0.25043127)
 texture = ExtResource("1_utggn")
