@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs54nfy5ta0wv"]
+
+[ext_resource type="Texture2D" uid="uid://tafvmf0wi74g" path="res://Assets/OldAssets/TankGame/TankBase.png" id="1_457lt"]
+[ext_resource type="Script" uid="uid://boyijhuy67td" path="res://Scripts/PlayerMaster.cs" id="1_pshfv"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_pshfv")
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_457lt")

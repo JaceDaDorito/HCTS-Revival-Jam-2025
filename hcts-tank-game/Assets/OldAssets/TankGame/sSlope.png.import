@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhaeucky2g3hc"
-path="res://.godot/imported/ahhh.jpg-b2513c9c8f2302af312d0e0af85638a0.ctex"
+uid="uid://bdsd1ndur6myn"
+path="res://.godot/imported/sSlope.png-58ea4ee7a1c73d7f1af0c39c2914a6b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ahhh.jpg"
-dest_files=["res://.godot/imported/ahhh.jpg-b2513c9c8f2302af312d0e0af85638a0.ctex"]
+source_file="res://Assets/OldAssets/TankGame/sSlope.png"
+dest_files=["res://.godot/imported/sSlope.png-58ea4ee7a1c73d7f1af0c39c2914a6b7.ctex"]
 
 [params]
 

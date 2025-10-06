@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpwu2h4p2hv5s"]
+
+[ext_resource type="PackedScene" uid="uid://bd4224s488141" path="res://Scenes/Prefabs/GameManager.tscn" id="1_b5ayd"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="GameManager" parent="." instance=ExtResource("1_b5ayd")]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://but1ohdhiq1ob"
-path="res://.godot/imported/Ghastly.webp-3dbd03fd2a42461b154619b5b479c9db.ctex"
+uid="uid://c1jxruotjfn38"
+path="res://.godot/imported/TankBarrel.png-d2a735f6b9d6e2d1d81c6a0d0802da47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ghastly.webp"
-dest_files=["res://.godot/imported/Ghastly.webp-3dbd03fd2a42461b154619b5b479c9db.ctex"]
+source_file="res://Assets/OldAssets/TankGame/TankBarrel.png"
+dest_files=["res://.godot/imported/TankBarrel.png-d2a735f6b9d6e2d1d81c6a0d0802da47.ctex"]
 
 [params]
 
