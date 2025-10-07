@@ -1,10 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cs54nfy5ta0wv"]
+[gd_scene load_steps=5 format=3 uid="uid://cs54nfy5ta0wv"]
 
 [ext_resource type="Texture2D" uid="uid://tafvmf0wi74g" path="res://Assets/OldAssets/TankGame/TankBase.png" id="1_457lt"]
 [ext_resource type="Script" uid="uid://boyijhuy67td" path="res://Scripts/PlayerMaster.cs" id="1_pshfv"]
+[ext_resource type="Script" uid="uid://cc4ihqma6oty6" path="res://Scripts/CharacterMotor.cs" id="2_jn6sr"]
 
-[node name="Player" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqs1d"]
+size = Vector2(16, 16)
+
+[node name="Player" type="Node2D" node_paths=PackedStringArray("targetMotor")]
 script = ExtResource("1_pshfv")
+targetMotor = NodePath("CharacterBody2D")
 
-[node name="PlayerSprite" type="Sprite2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_jn6sr")
+Speed = 100.0
+RotationSpeed = 3.0
+
+[node name="PlayerSprite" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("1_457lt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_xqs1d")

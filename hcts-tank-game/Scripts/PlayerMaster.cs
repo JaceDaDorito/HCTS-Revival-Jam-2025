@@ -3,13 +3,28 @@ using System;
 
 namespace HCTSTankGame;
 
-public partial class PlayerMaster : Node2D
+public partial class PlayerMaster : Node
 {
+    [Export]
+    public CharacterMotor targetMotor;
 
-    public override void _Ready()
-    {
+    private float _rotationDirection;
+    private float _moveDirection; //relative to orientation
+    public void GetPlayerInput() {
+        _rotationDirection = Input.GetAxis("left", "right");
+        _moveDirection = Input.GetAxis("backward", "forward");
     }
-    public override void _Process(double delta)
+
+    public void SetTargetMotorDirections()
     {
+        targetMotor._rotationDirection = _rotationDirection;
+        targetMotor._moveDirection = _moveDirection;
     }
+
+    public override void _PhysicsProcess(double delta)
+    {
+        GetPlayerInput();
+        SetTargetMotorDirections();
+    }
+
 }

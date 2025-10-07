@@ -1,7 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpwu2h4p2hv5s"]
+[gd_scene load_steps=4 format=3 uid="uid://bpwu2h4p2hv5s"]
 
 [ext_resource type="PackedScene" uid="uid://bd4224s488141" path="res://Scenes/Prefabs/GameManager.tscn" id="1_b5ayd"]
+[ext_resource type="PackedScene" uid="uid://dlw8pid0art6o" path="res://Scenes/Prefabs/Global.tscn" id="2_5lt6y"]
+[ext_resource type="PackedScene" uid="uid://d2frsttwiu07v" path="res://Scenes/Prefabs/Player/PlayerSpawn.tscn" id="3_8k7wh"]
 
 [node name="TestScene" type="Node2D"]
 
 [node name="GameManager" parent="." instance=ExtResource("1_b5ayd")]
+
+[node name="Global" parent="." instance=ExtResource("2_5lt6y")]
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("3_8k7wh")]
+position = Vector2(36, 33)
+rotation = -1.8389387

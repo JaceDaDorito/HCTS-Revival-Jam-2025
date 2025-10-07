@@ -5,26 +5,32 @@ using System;
 namespace HCTSTankGame;
 public partial class GameManager : Node
 {
-    [Export]
-    public PackedScene Player;
+	[Export]
+	public PackedScene Player;
 
-    [Export]
-    public PackedScene Spawn;    
+	[Export]
+	public PackedScene Spawn;    
 
-    //Called on starts
-    public override void _Ready()
-    {
-        GD.Print("Initializing Player");
-        PlayerMaster player = Player.Instantiate<PlayerMaster>();
+	public void SpawnPlayer()
+	{
+		GD.Print("Initializing Player");
+		Global.PlayerInstance = Player.Instantiate<PlayerMaster>();
 
-        //Should probably delay this to the scene with actual gameplay.
-        GetTree().CurrentScene.AddChild(player);
-        //player.Position = new Vector2(0f, 0f);
-    }
+		//Should probably delay this to the scene with actual gameplay.
+		AddChild(Global.PlayerInstance);
+		Global.PlayerInstance.targetMotor.Position = Global.PlayerSpawnInstance.GlobalPosition;
+		Global.PlayerInstance.targetMotor.Rotation = Global.PlayerSpawnInstance.GlobalRotation;
+	}
 
-    //Called every frame
-    public override void _Process(double delta)
-    {
-        
-    }
+	//Called on starts
+	public override void _Ready()
+	{
+		Global.GameManager = this;
+	}
+
+	//Called every frame
+	public override void _Process(double delta)
+	{
+		
+	}
 }
