@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bado5ld8j08k2"]
+
+[ext_resource type="TileSet" uid="uid://d0epuj2ugd04i" path="res://Tilesheets/Tiles.tres" id="1_no7f8"]
+
+[node name="Geo" type="TileMapLayer"]
+tile_set = ExtResource("1_no7f8")

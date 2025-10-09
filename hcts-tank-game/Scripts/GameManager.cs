@@ -9,17 +9,26 @@ public partial class GameManager : Node
 	public PackedScene Player;
 
 	[Export]
-	public PackedScene Spawn;    
+	public PackedScene Spawn;
+
+	private Node2D spawnPoint => Global.SceneInfoInstance.spawnPoint;
+
 
 	public void SpawnPlayer()
 	{
+		if(Global.SceneInfoInstance.spawnPoint == null)
+		{
+			GD.PrintErr("Spawn Point not found, not spawning player.");
+			return;
+		}
+
 		GD.Print("Initializing Player");
 		Global.PlayerInstance = Player.Instantiate<PlayerMaster>();
 
 		//Should probably delay this to the scene with actual gameplay.
 		AddChild(Global.PlayerInstance);
-		Global.PlayerInstance.TargetMotor.Position = Global.SceneInfoInstance.GlobalPosition;
-		Global.PlayerInstance.TargetMotor.Rotation = Global.SceneInfoInstance.GlobalRotation;
+		Global.PlayerInstance.TargetMotor.Position = spawnPoint.GlobalPosition;
+		Global.PlayerInstance.TargetMotor.Rotation = spawnPoint.GlobalRotation;
 	}
 
 	//Called on starts

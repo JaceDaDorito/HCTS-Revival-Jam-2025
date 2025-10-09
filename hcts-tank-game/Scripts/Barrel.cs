@@ -14,7 +14,7 @@ public partial class Barrel : Sprite2D
 
 	public void LookAtMouse()
 	{
-		Vector2 mousePos = GetViewport().GetMousePosition();
+		Vector2 mousePos = GetGlobalMousePosition();
 		LookAt(mousePos);
 	}
 }

@@ -9,16 +9,14 @@ namespace HCTSTankGame;
 public partial class SceneInfo : Node2D
 {
 	[Export]
-	public Vector2 originOfRoom = Vector2.Zero;
+	public Node2D spawnPoint;
 	[Export]
 	public Vector2 roomDimensions = Global.DEFAULT_RESOLUTION; //Don't go beyond these bounds, make sure it is an even number
 
-	private Vector2 TopLeft => new Vector2( (originOfRoom.X - roomDimensions.X / 2f), (originOfRoom.Y - roomDimensions.Y / 2f));
-	private Vector2 BottomRight => new Vector2((originOfRoom.X + roomDimensions.X / 2f), (originOfRoom.Y + roomDimensions.Y / 2f) );
+	private Vector2 TopLeft => new Vector2( (GlobalPosition.X - roomDimensions.X / 2f), (GlobalPosition.Y - roomDimensions.Y / 2f));
+	private Vector2 BottomRight => new Vector2((GlobalPosition.X + roomDimensions.X / 2f), (GlobalPosition.Y + roomDimensions.Y / 2f) );
 
 	[ExportGroup("Debug Properties")]
-	[Export]
-	public Texture2D debugTexture;
 	[Export]
 	public Color debugColor;
 	[Export]
@@ -49,10 +47,9 @@ public partial class SceneInfo : Node2D
 	{
 		if (!Engine.IsEditorHint()) return;
 
-		if(debugTexture != null) DrawTexture(debugTexture, new Vector2());
-		DrawCircle(originOfRoom - GlobalPosition, 4, debugColor, false, debugWidth);
+		DrawCircle(new Vector2(0,0), 4, debugColor, false, debugWidth);
 
-		Rect2 rect2 = new Rect2(TopLeft - GlobalPosition, roomDimensions);
+		Rect2 rect2 = new Rect2(TopLeft, roomDimensions);
 		DrawRect(rect2, debugColor, false, debugWidth);
 	}
 
