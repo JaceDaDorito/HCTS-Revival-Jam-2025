@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb8uayly4rapo"]
+
+[ext_resource type="Script" uid="uid://lc01p50ta0i7" path="res://Scripts/SceneInfo.cs" id="1_t1nt0"]
+[ext_resource type="Texture2D" uid="uid://dfv6bxf2h2bry" path="res://Assets/TestTexturesGala/TankHologramBase.png" id="2_7fsth"]
+
+[node name="SceneInfo" type="Node2D"]
+script = ExtResource("1_t1nt0")
+debugTexture = ExtResource("2_7fsth")
+debugColor = Color(0.7819137, 0.6104258, 1, 0.9647059)

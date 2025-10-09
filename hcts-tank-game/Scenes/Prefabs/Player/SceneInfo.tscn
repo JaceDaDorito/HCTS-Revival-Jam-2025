@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://mlbwhiaq0y4u"]
+
+[ext_resource type="Texture2D" uid="uid://dfv6bxf2h2bry" path="res://Assets/TestTexturesGala/TankHologramBase.png" id="1_ip07b"]
+[ext_resource type="Script" uid="uid://lc01p50ta0i7" path="res://Scripts/SceneInfo.cs" id="2_rltmf"]
+
+[node name="SceneInfo" type="Sprite2D"]
+texture = ExtResource("1_ip07b")
+script = ExtResource("2_rltmf")
+roomDimensions = Vector2(1280, 720)

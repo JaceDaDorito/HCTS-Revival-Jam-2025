@@ -18,8 +18,8 @@ public partial class GameManager : Node
 
 		//Should probably delay this to the scene with actual gameplay.
 		AddChild(Global.PlayerInstance);
-		Global.PlayerInstance.targetMotor.Position = Global.PlayerSpawnInstance.GlobalPosition;
-		Global.PlayerInstance.targetMotor.Rotation = Global.PlayerSpawnInstance.GlobalRotation;
+		Global.PlayerInstance.TargetMotor.Position = Global.SceneInfoInstance.GlobalPosition;
+		Global.PlayerInstance.TargetMotor.Rotation = Global.SceneInfoInstance.GlobalRotation;
 	}
 
 	//Called on starts

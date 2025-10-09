@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bd4224s488141" path="res://Scenes/Prefabs/GameManager.tscn" id="1_b5ayd"]
 [ext_resource type="PackedScene" uid="uid://dlw8pid0art6o" path="res://Scenes/Prefabs/Global.tscn" id="2_5lt6y"]
-[ext_resource type="PackedScene" uid="uid://d2frsttwiu07v" path="res://Scenes/Prefabs/Player/PlayerSpawn.tscn" id="3_8k7wh"]
+[ext_resource type="PackedScene" uid="uid://bb8uayly4rapo" path="res://Scenes/Prefabs/SceneInfo.tscn" id="4_0f5h7"]
 
 [node name="TestScene" type="Node2D"]
 
@@ -10,6 +10,6 @@
 
 [node name="Global" parent="." instance=ExtResource("2_5lt6y")]
 
-[node name="PlayerSpawn" parent="." instance=ExtResource("3_8k7wh")]
-position = Vector2(36, 33)
-rotation = -1.8389387
+[node name="SceneInfo" parent="." instance=ExtResource("4_0f5h7")]
+position = Vector2(-65, 29)
+debugColor = Color(0.40900588, 0.44964355, 0.9455393, 1)

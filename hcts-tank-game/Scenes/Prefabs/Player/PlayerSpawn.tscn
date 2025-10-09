@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2frsttwiu07v"]
-
-[ext_resource type="Texture2D" uid="uid://dlx60pmj520rq" path="res://Assets/OldAssets/TankGame/oSolid.png" id="1_dvgew"]
-[ext_resource type="Script" uid="uid://bpw7fbduxgt67" path="res://Scripts/PlayerSpawn.cs" id="1_np06y"]
-
-[node name="PlayerSpawn" type="Sprite2D"]
-texture = ExtResource("1_dvgew")
-script = ExtResource("1_np06y")
