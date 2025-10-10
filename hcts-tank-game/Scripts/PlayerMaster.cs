@@ -11,6 +11,14 @@ public partial class PlayerMaster : Node
 	{
 		get { return _targetMotor; }
 	}
+
+	[Export]
+	private PlayerBarrel _targetBarrel;
+	public PlayerBarrel TargetBarrel
+	{
+		get { return _targetBarrel; }
+	}
+	
 	[Export]
 	private Camera2D _camera;
 

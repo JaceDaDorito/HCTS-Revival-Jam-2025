@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cc4ihqma6oty6" path="res://Scripts/CharacterMotor.cs" id="2_jn6sr"]
 [ext_resource type="Texture2D" uid="uid://b4eecvvonb2nd" path="res://Assets/TestTexturesGala/TankRedBase.png" id="3_jn6sr"]
 [ext_resource type="Texture2D" uid="uid://bvcerew70kb3v" path="res://Assets/TestTexturesGala/TankRedCannon.png" id="3_xqs1d"]
-[ext_resource type="Script" uid="uid://cg361mmxc3bbd" path="res://Scripts/Barrel.cs" id="4_b20bq"]
+[ext_resource type="Script" uid="uid://drljnyygv74i7" path="res://Scripts/PlayerBarrel.cs" id="4_b20bq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jn6sr"]
 
