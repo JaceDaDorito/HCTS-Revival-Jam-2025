@@ -11,13 +11,6 @@ public partial class PlayerMaster : Node
 	{
 		get { return _targetMotor; }
 	}
-
-	[Export]
-	private PlayerBarrel _targetBarrel;
-	public PlayerBarrel TargetBarrel
-	{
-		get { return _targetBarrel; }
-	}
 	
 	[Export]
 	private Camera2D _camera;
@@ -30,8 +23,8 @@ public partial class PlayerMaster : Node
 	private float _rotationDirection;
 	private float _moveDirection; //relative to orientation
 	public void GetPlayerInput() {
-		_rotationDirection = Input.GetAxis("left", "right");
-		_moveDirection = Input.GetAxis("backward", "forward");
+		_rotationDirection = Input.GetAxis(Global.LEFT, Global.RIGHT);
+		_moveDirection = Input.GetAxis(Global.BACKWARD, Global.FORWARD);
 	}
 
 	public void SetTargetMotorDirections()

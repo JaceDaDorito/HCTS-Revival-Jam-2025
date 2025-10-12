@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://cs54nfy5ta0wv"]
+[gd_scene load_steps=10 format=3 uid="uid://cs54nfy5ta0wv"]
 
 [ext_resource type="Script" uid="uid://boyijhuy67td" path="res://Scripts/PlayerMaster.cs" id="1_pshfv"]
 [ext_resource type="Script" uid="uid://cc4ihqma6oty6" path="res://Scripts/CharacterMotor.cs" id="2_jn6sr"]
 [ext_resource type="Texture2D" uid="uid://b4eecvvonb2nd" path="res://Assets/TestTexturesGala/TankRedBase.png" id="3_jn6sr"]
 [ext_resource type="Texture2D" uid="uid://bvcerew70kb3v" path="res://Assets/TestTexturesGala/TankRedCannon.png" id="3_xqs1d"]
-[ext_resource type="Script" uid="uid://drljnyygv74i7" path="res://Scripts/PlayerBarrel.cs" id="4_b20bq"]
+[ext_resource type="Script" uid="uid://cfo44g1eo0cok" path="res://Scripts/PlayerWeaponController.cs" id="4_yhgqv"]
+[ext_resource type="Script" uid="uid://bvxx61rcgq4wm" path="res://Scripts/Weapon.cs" id="5_2ffde"]
+[ext_resource type="PackedScene" uid="uid://xqt8dpihy7mo" path="res://Scenes/Prefabs/BasicProjectile.tscn" id="6_2ffde"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jn6sr"]
 
@@ -22,16 +24,23 @@ script = ExtResource("2_jn6sr")
 Speed = 100.0
 RotationSpeed = 3.0
 
-[node name="Barrel" type="Sprite2D" parent="CharacterBody2D"]
+[node name="WeaponController" type="Sprite2D" parent="CharacterBody2D" node_paths=PackedStringArray("weapon")]
 z_index = 1
 rotation = -0.0011013236
 texture = ExtResource("3_xqs1d")
 offset = Vector2(3, 0)
-script = ExtResource("4_b20bq")
+script = ExtResource("4_yhgqv")
+weapon = NodePath("Weapon")
 
-[node name="Muzzle" type="Node2D" parent="CharacterBody2D/Barrel"]
+[node name="Weapon" type="Node2D" parent="CharacterBody2D/WeaponController" node_paths=PackedStringArray("muzzle")]
+script = ExtResource("5_2ffde")
+muzzle = NodePath("Muzzle")
+ammo = 5
+projectileType = ExtResource("6_2ffde")
+
+[node name="Muzzle" type="Node2D" parent="CharacterBody2D/WeaponController/Weapon"]
 z_index = 1
-position = Vector2(-9.999993, -0.011013233)
+position = Vector2(6.999995, 0.0077092643)
 
 [node name="PlayerSprite" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("3_jn6sr")
