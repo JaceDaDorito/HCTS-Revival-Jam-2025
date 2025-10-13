@@ -1,40 +1,63 @@
 using Godot;
 using System;
+using static Godot.SkeletonProfile;
 
 
 namespace HCTSTankGame;
 public partial class GameManager : Node
 {
+
 	[Export]
 	public PackedScene Player;
-
 	[Export]
-	public PackedScene Spawn;
+	public LevelCatalog levelCatalog;
 
-	private Node2D spawnPoint => Global.SceneInfoInstance.spawnPoint;
+	public static GameManager Instance { get; set; }
+	public PlayerMaster PlayerInstance { get; set; }
+	public SceneInfo SceneInfoInstance { get; set; }
+	private Node2D spawnPoint => SceneInfoInstance.spawnPoint;
 
+	private Node currentScene => GetTree().CurrentScene;
+	private int currentLevelIndex = 0;
 
+	//Called on starts
+	public override void _Ready()
+	{
+		Instance = this;
+	}
 	public void SpawnPlayer()
 	{
-		if(Global.SceneInfoInstance.spawnPoint == null)
+		if(SceneInfoInstance.spawnPoint == null)
 		{
 			GD.PrintErr("Spawn Point not found, not spawning player.");
 			return;
 		}
 
 		GD.Print("Initializing Player");
-		Global.PlayerInstance = Player.Instantiate<PlayerMaster>();
+		PlayerInstance = Player.Instantiate<PlayerMaster>();
 
 		//Should probably delay this to the scene with actual gameplay.
-		AddChild(Global.PlayerInstance);
-		Global.PlayerInstance.TargetMotor.Position = spawnPoint.GlobalPosition;
-		Global.PlayerInstance.TargetMotor.Rotation = spawnPoint.GlobalRotation;
+		currentScene.CallDeferred(Node.MethodName.AddChild, PlayerInstance);
+		PlayerInstance.TargetMotor.Position = spawnPoint.GlobalPosition;
+		PlayerInstance.TargetMotor.Rotation = spawnPoint.GlobalRotation;
 	}
 
-	//Called on starts
-	public override void _Ready()
+	public override void _UnhandledInput(InputEvent @event)
 	{
-		Global.GameManager = this;
+		if (@event.IsAction(Global.DEBUGNEXTLEVL) & @event.IsPressed())
+		{
+			NextLevel();
+		}
+	}
+
+	//Hardcoded, will make proper level loading later
+
+	public void NextLevel()
+	{
+		currentLevelIndex++;
+		string levelUID = levelCatalog.GetLevelUID(currentLevelIndex);
+		GD.Print(currentLevelIndex);
+		SceneTransition.Instance.ChangeScene(levelUID);
 	}
 
 	//Called every frame
@@ -42,4 +65,6 @@ public partial class GameManager : Node
 	{
 		
 	}
+
+
 }

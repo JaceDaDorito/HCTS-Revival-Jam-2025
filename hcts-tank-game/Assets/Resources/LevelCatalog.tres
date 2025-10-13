@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bcuuon1xyq1rq"]
+
+[ext_resource type="Script" uid="uid://n82ekqnsaq1o" path="res://Scripts/LevelCatalog.cs" id="3_4q86k"]
+
+[resource]
+script = ExtResource("3_4q86k")
+_nameToSceneUID = Dictionary[String, String]({
+"level1": "uid://bis2itpd27ta3",
+"level2": "uid://dh4xn2ts0xwpy"
+})

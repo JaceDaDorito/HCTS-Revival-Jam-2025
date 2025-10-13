@@ -26,8 +26,8 @@ public partial class SceneInfo : Node2D
 	{
 		if (Engine.IsEditorHint()) return;
 
-		Global.SceneInfoInstance = this;
-		Global.GameManager.SpawnPlayer(); //Move this to wherever is necessary. Make sure Spawning the Player happens AFTER the spawn point is stored
+		GameManager.Instance.SceneInfoInstance = this;
+		GameManager.Instance.SpawnPlayer(); //Move this to wherever is necessary. Make sure Spawning the Player happens AFTER the spawn point is stored
 
 		SetCameraParams();
 	}
@@ -35,11 +35,11 @@ public partial class SceneInfo : Node2D
 	//Left and Top is positive for some reason
 	private void SetCameraParams()
 	{
-		Global.PlayerInstance.Camera.LimitTop = (int)TopLeft.Y;
-		Global.PlayerInstance.Camera.LimitBottom = (int)BottomRight.Y;
+		GameManager.Instance.PlayerInstance.Camera.LimitTop = (int)TopLeft.Y;
+		GameManager.Instance.PlayerInstance.Camera.LimitBottom = (int)BottomRight.Y;
 
-		Global.PlayerInstance.Camera.LimitLeft = (int)TopLeft.X;
-		Global.PlayerInstance.Camera.LimitRight = (int)BottomRight.X;
+		GameManager.Instance.PlayerInstance.Camera.LimitLeft = (int)TopLeft.X;
+		GameManager.Instance.PlayerInstance.Camera.LimitRight = (int)BottomRight.X;
 	}
 
 	//Editor
