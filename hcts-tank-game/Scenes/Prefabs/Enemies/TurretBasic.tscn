@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cc4ihqma6oty6" path="res://Scripts/CharacterMotor.cs" id="1_pgwfk"]
 [ext_resource type="Texture2D" uid="uid://bvcerew70kb3v" path="res://Assets/TestTexturesGala/TankRedCannon.png" id="2_7eva0"]
-[ext_resource type="Script" uid="uid://celyda428xfw6" path="res://Scripts/TurretWeaponController.cs" id="2_gveig"]
+[ext_resource type="Script" uid="uid://celyda428xfw6" path="res://Scripts/Enemy Weapon Controllers/TurretWeaponController.cs" id="2_gveig"]
 [ext_resource type="Script" uid="uid://bvxx61rcgq4wm" path="res://Scripts/Weapon.cs" id="3_7eva0"]
 [ext_resource type="PackedScene" uid="uid://xqt8dpihy7mo" path="res://Scenes/Prefabs/BasicProjectile.tscn" id="4_e10jj"]
 
@@ -20,6 +20,7 @@ offset = Vector2(3, 0)
 script = ExtResource("2_gveig")
 weapon = NodePath("Weapon")
 timer = NodePath("Firing Timer")
+angleList = PackedFloat32Array(0)
 
 [node name="Weapon" type="Node2D" parent="CharacterBody2D/WeaponController" node_paths=PackedStringArray("muzzle")]
 script = ExtResource("3_7eva0")

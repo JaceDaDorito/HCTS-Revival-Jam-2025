@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://c3b02pf2wjr81"]
+
+[ext_resource type="Texture2D" uid="uid://bp3lk7ucvof5n" path="res://Assets/TestTexturesGala/TankBlueCannon.png" id="2_eg4ry"]
+[ext_resource type="Script" uid="uid://cc4ihqma6oty6" path="res://Scripts/CharacterMotor.cs" id="2_jeqqw"]
+[ext_resource type="Script" uid="uid://cvclxgvjeivyw" path="res://Scripts/Enemy Weapon Controllers/TankWeaponController.cs" id="3_pdyku"]
+[ext_resource type="Script" uid="uid://bvxx61rcgq4wm" path="res://Scripts/Weapon.cs" id="5_dcxpn"]
+[ext_resource type="Texture2D" uid="uid://1pi71m0xqfje" path="res://Assets/TestTexturesGala/TankBlueBase.png" id="5_pdyku"]
+[ext_resource type="PackedScene" uid="uid://xqt8dpihy7mo" path="res://Scenes/Prefabs/BasicProjectile.tscn" id="6_0430e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jn6sr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqs1d"]
+size = Vector2(16, 16)
+
+[node name="StationaryTank" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_mask = 25
+script = ExtResource("2_jeqqw")
+Speed = 100.0
+RotationSpeed = 3.0
+
+[node name="WeaponController" type="Sprite2D" parent="CharacterBody2D" node_paths=PackedStringArray("weapon", "timer", "aimBeam", "raycast")]
+z_index = 1
+rotation = -0.0011013236
+texture = ExtResource("2_eg4ry")
+offset = Vector2(3, 0)
+script = ExtResource("3_pdyku")
+weapon = NodePath("Weapon")
+timer = NodePath("Cooldown")
+aimBeam = NodePath("aimBeam")
+raycast = NodePath("aimBeam/Debug Raycast")
+
+[node name="Weapon" type="Node2D" parent="CharacterBody2D/WeaponController" node_paths=PackedStringArray("muzzle")]
+script = ExtResource("5_dcxpn")
+muzzle = NodePath("Muzzle")
+ammo = 5
+projectileType = ExtResource("6_0430e")
+
+[node name="Muzzle" type="Node2D" parent="CharacterBody2D/WeaponController/Weapon"]
+z_index = 1
+position = Vector2(6.999995, 0.0077092643)
+
+[node name="Cooldown" type="Timer" parent="CharacterBody2D/WeaponController"]
+wait_time = 2.0
+one_shot = true
+
+[node name="aimBeam" type="RayCast2D" parent="CharacterBody2D/WeaponController"]
+target_position = Vector2(0, 0)
+collision_mask = 8
+
+[node name="Debug Raycast" type="Line2D" parent="CharacterBody2D/WeaponController/aimBeam"]
+points = PackedVector2Array(0, 0, 50, 0)
+width = 6.0
+default_color = Color(0.1764706, 0.3647059, 0.9411765, 0.5921569)
+
+[node name="PlayerSprite" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("5_pdyku")
+
+[node name="Hurtsphere" type="Area2D" parent="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 4
+
+[node name="HurtsphereCollider" type="CollisionShape2D" parent="CharacterBody2D/Hurtsphere"]
+scale = Vector2(0.8, 0.8)
+shape = SubResource("CircleShape2D_jn6sr")
+debug_color = Color(0.820317, 0.21038377, 0.8428588, 0.41960785)
+
+[node name="MotorCollider" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_xqs1d")

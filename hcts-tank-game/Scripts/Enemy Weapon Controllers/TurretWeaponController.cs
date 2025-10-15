@@ -49,19 +49,23 @@ public partial class TurretWeaponController : Sprite2D
 	{
 		if (rotating)
 		{
+			//set values for lerp
 			easeValue += (float)delta * rotationSpeed;
 			lerpValue = MathUtils.easeInSine(easeValue);
 			lerpValue = Mathf.Clamp(lerpValue, 0, 1);
 
+			//convert rotations to radians
 			float initRotation = Mathf.DegToRad(angleList[index]);
 			float finalRotation = Mathf.DegToRad(angleList[(index + 1) % angleList.Length]);
 
+			//lerp the angle
 			Rotation = Mathf.LerpAngle(initRotation,
 				finalRotation,
 				lerpValue);
 
 			GD.Print("In Progress Rotation: " + Rotation);
 
+			//stop rotation once lerp finishes and increment index
 			if(lerpValue >= 1) {
 				rotating = false;
 				index++;
@@ -76,11 +80,12 @@ public partial class TurretWeaponController : Sprite2D
 		GD.Print(_aimDirection);
 		weapon.Fire(_aimDirection);
 
+		//reset values
 		lerpValue = 0;
 		easeValue = 0;
 		
+		//restart rotation
 		rotating = true;
-
 		timer.Start();
 	}
 }
