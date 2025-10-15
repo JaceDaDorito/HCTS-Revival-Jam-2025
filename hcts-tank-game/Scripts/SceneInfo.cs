@@ -22,14 +22,24 @@ public partial class SceneInfo : Node2D
 	[Export]
 	public int debugWidth = 2;
 
+	public delegate void OnSceneStart();
+	public event OnSceneStart onSceneStart;
+
 	public override void _Ready()
 	{
 		if (Engine.IsEditorHint()) return;
 
 		GameManager.Instance.SceneInfoInstance = this;
-		GameManager.Instance.SpawnPlayer(); //Move this to wherever is necessary. Make sure Spawning the Player happens AFTER the spawn point is stored
+		SceneStart(); //Move this to wherever is necessary. Make sure Spawning the Player happens AFTER the spawn point is stored
 
 		SetCameraParams();
+	}
+
+	public void SceneStart()
+	{
+		GameManager.Instance.SpawnPlayer();
+		SetCameraParams();
+		onSceneStart?.Invoke();
 	}
 
 	//Left and Top is positive for some reason

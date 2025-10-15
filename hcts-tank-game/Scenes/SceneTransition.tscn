@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4e5ermblvdv5"]
+[gd_scene load_steps=6 format=3 uid="uid://b4e5ermblvdv5"]
 
 [ext_resource type="Script" uid="uid://dj56nk1xkaofi" path="res://Scripts/SceneTransition.cs" id="1_rryme"]
 
@@ -34,10 +34,27 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_tu0iv"]
+resource_name = "full"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dissolve:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tu0iv"]
 _data = {
 &"RESET": SubResource("Animation_thta4"),
-&"dissolve": SubResource("Animation_rryme")
+&"dissolve": SubResource("Animation_rryme"),
+&"full": SubResource("Animation_tu0iv")
 }
 
 [node name="SceneTransition" type="CanvasLayer" node_paths=PackedStringArray("animationPlayer")]
@@ -52,7 +69,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.44965273, 0.55855304, 0.6744791, 1)
+color = Color(0.4509804, 0.5568628, 0.6745098, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

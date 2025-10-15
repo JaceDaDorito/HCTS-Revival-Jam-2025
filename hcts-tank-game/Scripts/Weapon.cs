@@ -12,6 +12,7 @@ public partial class Weapon : Node {
 	private int ammo;
 	[Export]
 	public PackedScene projectileType;
+	public Master master;
 
 	private Node main;
 
@@ -24,6 +25,7 @@ public partial class Weapon : Node {
 		outgoingShotCount = 0;
 		infiniteAmmo = ammo < 1;
 		main = GetTree().CurrentScene;
+		master = GetOwner<Master>();
 		ready = true;
 	}
 	
@@ -39,6 +41,7 @@ public partial class Weapon : Node {
 		projectile.Rotation = aimDirection.Angle();
 		projectile.GlobalPosition = muzzle.GlobalPosition;
 		projectile.onProjectileDestroyed += OnProjectileDestroy;
+		projectile.owner = master;
 		main.CallDeferred(Node.MethodName.AddChild, projectile);
 	}
 

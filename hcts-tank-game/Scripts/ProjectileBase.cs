@@ -10,6 +10,8 @@ public partial class ProjectileBase : CharacterBody2D
 	public Area2D area2d;
 	[Export]
 	public float lifetime = 5f;
+	[Export]
+	public Master owner;
 
 	public Vector2 direction;
 
@@ -42,6 +44,7 @@ public partial class ProjectileBase : CharacterBody2D
 
 	public virtual void OnAreaEntered(Rid areaRid, Area2D area, long areaShapeIndex, long localShapeIndex)
 	{
+		
 	}
 
 }

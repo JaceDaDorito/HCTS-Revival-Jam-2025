@@ -21,7 +21,7 @@ _camera = NodePath("CharacterBody2D/Camera2D")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 collision_mask = 25
 script = ExtResource("2_jn6sr")
-Speed = 100.0
+Speed = 77.0
 RotationSpeed = 3.0
 
 [node name="WeaponController" type="Sprite2D" parent="CharacterBody2D" node_paths=PackedStringArray("weapon")]
@@ -40,19 +40,19 @@ projectileType = ExtResource("6_2ffde")
 
 [node name="Muzzle" type="Node2D" parent="CharacterBody2D/WeaponController/Weapon"]
 z_index = 1
-position = Vector2(6.999995, 0.0077092643)
+position = Vector2(9.999994, 0.011013234)
 
-[node name="PlayerSprite" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("3_jn6sr")
-
-[node name="Hurtsphere" type="Area2D" parent="CharacterBody2D"]
+[node name="Hurtsphere" type="Area2D" parent="CharacterBody2D" groups=["HurtZone"]]
 collision_layer = 2
 collision_mask = 4
 
-[node name="HurtsphereCollider" type="CollisionShape2D" parent="CharacterBody2D/Hurtsphere"]
+[node name="HurtsphereCollider" type="CollisionShape2D" parent="CharacterBody2D/Hurtsphere" groups=["HurtZone"]]
 scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_jn6sr")
 debug_color = Color(0.820317, 0.21038377, 0.8428588, 0.41960785)
+
+[node name="PlayerSprite" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("3_jn6sr")
 
 [node name="MotorCollider" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_xqs1d")

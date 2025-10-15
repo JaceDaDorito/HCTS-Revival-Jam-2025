@@ -21,4 +21,14 @@ public static partial class Global
 	public const string DEBUGNEXTLEVL = "nextlevel";
 
 	public const string NULL_LEVEL_UID = "uid://dkjaiqaqe57qc";
+
+	public enum LAYERS
+	{
+		Body =			1,
+		EntityPrecise = 2,
+		Projectile =	3,
+		Wall =			4,
+		Hole =			5,
+		ProjectileBody= 6,
+	}
 }

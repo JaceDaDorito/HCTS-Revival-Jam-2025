@@ -25,6 +25,8 @@ public partial class GameManager : Node
 	{
 		Instance = this;
 	}
+
+	
 	public void SpawnPlayer()
 	{
 		if(SceneInfoInstance.spawnPoint == null)
@@ -38,6 +40,7 @@ public partial class GameManager : Node
 
 		//Should probably delay this to the scene with actual gameplay.
 		currentScene.CallDeferred(Node.MethodName.AddChild, PlayerInstance);
+		PlayerInstance.onMasterDeath += ReloadLevel;
 		PlayerInstance.TargetMotor.Position = spawnPoint.GlobalPosition;
 		PlayerInstance.TargetMotor.Rotation = spawnPoint.GlobalRotation;
 	}
@@ -57,6 +60,12 @@ public partial class GameManager : Node
 		currentLevelIndex++;
 		string levelUID = levelCatalog.GetLevelUID(currentLevelIndex);
 		GD.Print(currentLevelIndex);
+		SceneTransition.Instance.ChangeScene(levelUID);
+	}
+
+	public void ReloadLevel()
+	{
+		string levelUID = levelCatalog.GetLevelUID(currentLevelIndex);
 		SceneTransition.Instance.ChangeScene(levelUID);
 	}
 
