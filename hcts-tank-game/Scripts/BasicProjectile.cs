@@ -35,6 +35,6 @@ public partial class BasicProjectile : ProjectileBase
 		//why
 		direction = direction.Bounce(normal);
 		Rotation = direction.Angle();
-		GD.Print("Direction: " + direction + " Normal: " + normal + " DOT: " + normal.Dot(direction));
+		//GD.Print("Direction: " + direction + " Normal: " + normal + " DOT: " + normal.Dot(direction));
 	}
 }

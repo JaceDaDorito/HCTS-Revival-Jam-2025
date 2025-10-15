@@ -1,91 +1,86 @@
 using Godot;
 using HCTSTankGame;
+using HCTSTankGame.Utils;
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
+
+namespace HCTSTankGame;
 public partial class TurretWeaponController : Sprite2D
 {
-    [Export]
-    public Weapon weapon;
-    [Export]
-    public Godot.Timer timer;
+	[Export]
+	public Weapon weapon;
+	[Export]
+	public Godot.Timer timer;
+	[Export]
+	public float[] angleList;
+	[Export]
+	public float rotationSpeed = 1.5f;
+	[Export]
+	public float cooldown = 2f;
 
-    private Node main;
-    private float rotationSpeed = 1.5f;
-    private List<float> angleList = new List<float>();
-    private float nextAngle;
-    private int angleID;
+	private Node main;
+	private float nextAngle;
+	private int angleID;
 
-    private Vector2 _aimDirection => Vector2.FromAngle(GlobalRotation); 
+	private int _index = 0;
+	private int index
+	{
+		get { return _index; }
+		set { _index = value % angleList.Length; }
+	}
+	private bool rotating = false;
+	private float lerpValue = 0;
+	private float easeValue = 0;
+	private Vector2 _aimDirection => Vector2.FromAngle(GlobalRotation); 
 
-    public override void _Ready()
-    {
-        timer.Timeout += Timer_Timeout;
-        angleList.Add(45);
-        angleList.Add(135);
-        angleList.Add(225);
-        angleList.Add(315);
+	public override void _Ready()
+	{
+		timer.Timeout += Timer_Timeout;
+		timer.WaitTime = cooldown;
 
-        angleID = 0;
-        nextAngle = angleList[angleID];
-        Rotate(Mathf.DegToRad(45));
-    }
+		nextAngle = angleList[angleID];
+		Rotate(Mathf.DegToRad(angleList[index]));
+	}
 
-    public override void _PhysicsProcess(double delta)
-    {
-        /* This shit isn't how you do it
-        float rot1 = Rotation;
-        float rot2 = Rotation + (float)(Math.PI / 2);
-        double timeAlongLerp = timer.TimeLeft - (timeLowThreshold * 2);
+	public override void _Process(double delta)
+	{
+		if (rotating)
+		{
+			easeValue += (float)delta * rotationSpeed;
+			lerpValue = MathUtils.easeInSine(easeValue);
+			lerpValue = Mathf.Clamp(lerpValue, 0, 1);
 
-        //slow rotation
-        //Rotation += ((float)(1 * delta));
+			float initRotation = Mathf.DegToRad(angleList[index]);
+			float finalRotation = Mathf.DegToRad(angleList[(index + 1) % angleList.Length]);
 
-        if (timeLowThreshold < timer.TimeLeft && timer.TimeLeft < timeHighThreshold)
-        {
-            float interpolation = (float)(timeHighThreshold * (1 - timeAlongLerp) + (timeLowThreshold * timeAlongLerp));
-            
-        }
-        */
+			Rotation = Mathf.LerpAngle(initRotation,
+				finalRotation,
+				lerpValue);
 
-        /* this shit doesn't work either, probably just ask jace
-        if (Mathf.RadToDeg(Rotation) != nextAngle)
-        {
-            Rotation += rotationSpeed * (float)delta;
-            GD.Print(Rotation);
-        }
-        else
-        {
-            //if its close enough, force lock position
-            GD.Print("Lock");
-            Rotation = Mathf.DegToRad(nextAngle);
-        }
-        */
-    }
+			GD.Print("In Progress Rotation: " + Rotation);
 
-    private void Timer_Timeout()
-    {
-        //fire on timer
-        GD.Print(_aimDirection);
-        weapon.Fire(_aimDirection);
+			if(lerpValue >= 1) {
+				rotating = false;
+				index++;
 
-        //Activate Rotation
-        Rotate(Mathf.DegToRad(90));
-        if(angleID >= angleList.Count - 1)
-        {
-            angleID = 0;
-        }
-        else
-        {
-            angleID += 1;
-        }
+				GD.Print("Rotation: " + initRotation + " " + finalRotation);
+			}
+		}
+	}
+	private void Timer_Timeout()
+	{
+		//fire on timer
+		GD.Print(_aimDirection);
+		weapon.Fire(_aimDirection);
 
-        nextAngle = angleList[angleID];
-        //GD.Print(nextAngle);
+		lerpValue = 0;
+		easeValue = 0;
+		
+		rotating = true;
 
-        //restart timer
-        timer.Start();
-    }
+		timer.Start();
+	}
 }

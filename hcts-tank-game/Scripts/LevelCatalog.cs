@@ -6,6 +6,7 @@ namespace HCTSTankGame;
 
 public partial class LevelCatalog : Resource
 {
+    //Key is name of level, value is UID of level
     [Export]
     private Godot.Collections.Dictionary<string, string> _nameToSceneUID = new Godot.Collections.Dictionary<string, string>();
 
