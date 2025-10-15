@@ -1,8 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://bd4224s488141"]
+[gd_scene load_steps=13 format=3 uid="uid://bd4224s488141"]
 
 [ext_resource type="Script" uid="uid://biucowdw8cs1o" path="res://Scripts/GameManager.cs" id="1_4lw0i"]
-[ext_resource type="PackedScene" uid="uid://cs54nfy5ta0wv" path="res://Scenes/Prefabs/Player/Player.tscn" id="2_n3e36"]
+[ext_resource type="Script" uid="uid://boyijhuy67td" path="res://Scripts/PlayerMaster.cs" id="2_dk0tb"]
+[ext_resource type="Script" uid="uid://cc4ihqma6oty6" path="res://Scripts/CharacterMotor.cs" id="3_dhmfs"]
+[ext_resource type="Texture2D" uid="uid://bvcerew70kb3v" path="res://Assets/TestTexturesGala/TankRedCannon.png" id="4_wn31x"]
+[ext_resource type="Script" uid="uid://cfo44g1eo0cok" path="res://Scripts/PlayerWeaponController.cs" id="5_a2w5w"]
+[ext_resource type="Script" uid="uid://bvxx61rcgq4wm" path="res://Scripts/Weapon.cs" id="6_gpwvx"]
+[ext_resource type="PackedScene" uid="uid://xqt8dpihy7mo" path="res://Scenes/Prefabs/BasicProjectile.tscn" id="7_vb15q"]
+[ext_resource type="Texture2D" uid="uid://b4eecvvonb2nd" path="res://Assets/TestTexturesGala/TankRedBase.png" id="8_vkts7"]
+[ext_resource type="Resource" uid="uid://bcuuon1xyq1rq" path="res://Assets/Resources/LevelCatalog.tres" id="9_7k5wa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jn6sr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqs1d"]
+size = Vector2(16, 16)
+
+[sub_resource type="PackedScene" id="PackedScene_sle0l"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("Player", "Node2D", "script", "_targetMotor", "_camera", "CharacterBody2D", "CharacterBody2D", "collision_mask", "script", "Speed", "RotationSpeed", "WeaponController", "Sprite2D", "z_index", "rotation", "texture", "offset", "script", "weapon", "Weapon", "Node2D", "script", "muzzle", "ammo", "projectileType", "Muzzle", "Node2D", "z_index", "position", "PlayerSprite", "Sprite2D", "texture", "Hurtsphere", "Area2D", "collision_layer", "collision_mask", "HurtsphereCollider", "CollisionShape2D", "scale", "shape", "debug_color", "MotorCollider", "CollisionShape2D", "shape", "Camera2D", "Camera2D"),
+"node_count": 10,
+"node_paths": [NodePath("."), NodePath("./CharacterBody2D"), NodePath("./CharacterBody2D/WeaponController"), NodePath("./CharacterBody2D/WeaponController/Weapon"), NodePath("./CharacterBody2D"), NodePath("./CharacterBody2D"), NodePath("./CharacterBody2D/Hurtsphere"), NodePath("./CharacterBody2D"), NodePath("./CharacterBody2D")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 3, 2, 0, 1073741827, 1, 1073741828, 2, 0, 1073741824, 0, 6, 5, -1, 4, 7, 3, 8, 4, 9, 5, 10, 6, 0, 1073741825, 0, 12, 11, -1, 6, 13, 7, 14, 8, 15, 9, 16, 10, 17, 11, 1073741842, 12, 0, 1073741826, 0, 20, 19, -1, 4, 21, 13, 1073741846, 14, 23, 15, 24, 16, 0, 1073741827, 0, 26, 25, -1, 2, 27, 17, 28, 18, 0, 1073741828, 0, 30, 29, -1, 1, 31, 19, 0, 1073741829, 0, 33, 32, -1, 2, 34, 20, 35, 21, 0, 1073741830, 0, 37, 36, -1, 3, 38, 22, 39, 23, 40, 24, 0, 1073741831, 0, 42, 41, -1, 1, 43, 25, 0, 1073741832, 0, 45, 44, -1, 0, 0),
+"variants": [ExtResource("2_dk0tb"), NodePath("CharacterBody2D"), NodePath("CharacterBody2D/Camera2D"), 25, ExtResource("3_dhmfs"), 100.0, 3.0, 1, -0.0011013236, ExtResource("4_wn31x"), Vector2(3, 0), ExtResource("5_a2w5w"), NodePath("Weapon"), ExtResource("6_gpwvx"), NodePath("Muzzle"), 5, ExtResource("7_vb15q"), 1, Vector2(6.999995, 0.0077092643), ExtResource("8_vkts7"), 2, 4, Vector2(0.8, 0.8), SubResource("CircleShape2D_jn6sr"), Color(0.820317, 0.21038377, 0.8428588, 0.41960785), SubResource("RectangleShape2D_xqs1d")],
+"version": 3
+}
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource("1_4lw0i")
-Player = ExtResource("2_n3e36")
+Player = SubResource("PackedScene_sle0l")
+levelCatalog = ExtResource("9_7k5wa")

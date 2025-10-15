@@ -19,13 +19,13 @@ public partial class Weapon : Node {
 	private bool infiniteAmmo = false;
 	private int outgoingShotCount = 0;
 
-    public override void _Ready()
-    {
+	public override void _Ready()
+	{
 		outgoingShotCount = 0;
 		infiniteAmmo = ammo < 1;
 		main = GetTree().CurrentScene;
 		ready = true;
-    }
+	}
 	
 	public void Fire(Vector2 aimDirection)
 	{
@@ -40,7 +40,7 @@ public partial class Weapon : Node {
 		projectile.GlobalPosition = muzzle.GlobalPosition;
 		projectile.onProjectileDestroyed += OnProjectileDestroy;
 		main.CallDeferred(Node.MethodName.AddChild, projectile);
-    }
+	}
 
 	public void OnProjectileDestroy()
 	{

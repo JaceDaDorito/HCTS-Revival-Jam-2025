@@ -1,11 +1,12 @@
 using Godot;
 using System;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 
 
 namespace HCTSTankGame;
 
-public partial class Global : Node
+public static partial class Global
 {
 
 	public readonly static Vector2 DEFAULT_RESOLUTION  = new Vector2(640, 360);
@@ -16,14 +17,8 @@ public partial class Global : Node
 	public const string FORWARD = "forward";
 	public const string BACKWARD = "backward";
 	public const string FIRE = "fire";
-	public static Global Instance { get; private set; }
-	public static GameManager GameManager { get; set; }
 
-	public static PlayerMaster PlayerInstance { get; set; }
-	public static SceneInfo SceneInfoInstance { get; set; }
+	public const string DEBUGNEXTLEVL = "nextlevel";
 
-	public override void _Ready()
-	{
-		Instance = this;
-	}
+	public const string NULL_LEVEL_UID = "uid://dkjaiqaqe57qc";
 }
