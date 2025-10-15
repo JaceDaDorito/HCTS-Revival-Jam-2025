@@ -9,8 +9,6 @@ public partial class PlayerWeaponController : Sprite2D
 {
     [Export]
     public Weapon weapon;
-    [Export]
-    public PackedScene projectileType;
 
     private Node main;
 

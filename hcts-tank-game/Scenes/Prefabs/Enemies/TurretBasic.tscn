@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://cwhfy1wtx2exc"]
+
+[ext_resource type="Script" uid="uid://cc4ihqma6oty6" path="res://Scripts/CharacterMotor.cs" id="1_pgwfk"]
+[ext_resource type="Texture2D" uid="uid://bvcerew70kb3v" path="res://Assets/TestTexturesGala/TankRedCannon.png" id="2_7eva0"]
+[ext_resource type="Script" uid="uid://celyda428xfw6" path="res://Scripts/TurretWeaponController.cs" id="2_gveig"]
+[ext_resource type="Script" uid="uid://bvxx61rcgq4wm" path="res://Scripts/Weapon.cs" id="3_7eva0"]
+[ext_resource type="PackedScene" uid="uid://xqt8dpihy7mo" path="res://Scenes/Prefabs/BasicProjectile.tscn" id="4_e10jj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2ruk"]
+size = Vector2(16, 16)
+
+[node name="TurretBasic" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_pgwfk")
+
+[node name="WeaponController" type="Sprite2D" parent="CharacterBody2D" node_paths=PackedStringArray("weapon", "timer")]
+texture = ExtResource("2_7eva0")
+offset = Vector2(3, 0)
+script = ExtResource("2_gveig")
+weapon = NodePath("Weapon")
+timer = NodePath("Firing Timer")
+
+[node name="Weapon" type="Node2D" parent="CharacterBody2D/WeaponController" node_paths=PackedStringArray("muzzle")]
+script = ExtResource("3_7eva0")
+muzzle = NodePath("Muzzle")
+projectileType = ExtResource("4_e10jj")
+
+[node name="Muzzle" type="Node2D" parent="CharacterBody2D/WeaponController/Weapon"]
+position = Vector2(7, 0)
+
+[node name="Firing Timer" type="Timer" parent="CharacterBody2D/WeaponController"]
+process_callback = 0
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="TurretSprite" type="Sprite2D" parent="CharacterBody2D"]
+
+[node name="TurretBody" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_j2ruk")
