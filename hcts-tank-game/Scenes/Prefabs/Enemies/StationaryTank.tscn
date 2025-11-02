@@ -20,7 +20,7 @@ script = ExtResource("2_jeqqw")
 Speed = 100.0
 RotationSpeed = 3.0
 
-[node name="WeaponController" type="Sprite2D" parent="CharacterBody2D" node_paths=PackedStringArray("weapon", "timer", "aimBeam", "raycast")]
+[node name="WeaponController" type="Sprite2D" parent="CharacterBody2D" node_paths=PackedStringArray("weapon", "timer", "lineOfSight", "raycastVisual")]
 z_index = 1
 rotation = -0.0011013236
 texture = ExtResource("2_eg4ry")
@@ -28,8 +28,8 @@ offset = Vector2(3, 0)
 script = ExtResource("3_pdyku")
 weapon = NodePath("Weapon")
 timer = NodePath("Cooldown")
-aimBeam = NodePath("aimBeam")
-raycast = NodePath("aimBeam/Debug Raycast")
+lineOfSight = NodePath("LineOfSight")
+raycastVisual = NodePath("LineOfSight/Debug Raycast")
 
 [node name="Weapon" type="Node2D" parent="CharacterBody2D/WeaponController" node_paths=PackedStringArray("muzzle")]
 script = ExtResource("5_dcxpn")
@@ -45,11 +45,11 @@ position = Vector2(6.999995, 0.0077092643)
 wait_time = 2.0
 one_shot = true
 
-[node name="aimBeam" type="RayCast2D" parent="CharacterBody2D/WeaponController"]
+[node name="LineOfSight" type="RayCast2D" parent="CharacterBody2D/WeaponController"]
 target_position = Vector2(0, 0)
 collision_mask = 8
 
-[node name="Debug Raycast" type="Line2D" parent="CharacterBody2D/WeaponController/aimBeam"]
+[node name="Debug Raycast" type="Line2D" parent="CharacterBody2D/WeaponController/LineOfSight"]
 points = PackedVector2Array(0, 0, 50, 0)
 width = 6.0
 default_color = Color(0.1764706, 0.3647059, 0.9411765, 0.5921569)

@@ -7,40 +7,44 @@
       "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\enemy weapon controllers\\tankweaponcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\playerweaponcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\playerweaponcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\enemy weapon controllers\\turretweaponcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\enemy weapon controllers\\turretweaponcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\charactermotor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\charactermotor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\projectilebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\projectilebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\basicprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\basicprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\sceneinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\sceneinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\playermaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\playermaster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\projectilebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\projectilebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\weapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\playerweaponcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\playerweaponcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\charactermotor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\charactermotor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\global.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\sceneinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|solutionrelative:scripts\\sceneinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{35FF8D69-8518-4D88-B6D6-457CA400E917}|hcts-tank-game.csproj|d:\\game development (team)\\hcts-revival-jam-2025\\hcts-tank-game\\scripts\\node2deditordrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,8 +58,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 191,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TurretWeaponController.cs",
+              "DocumentMoniker": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\Enemy Weapon Controllers\\TurretWeaponController.cs",
+              "RelativeDocumentMoniker": "Scripts\\Enemy Weapon Controllers\\TurretWeaponController.cs",
+              "ToolTip": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\Enemy Weapon Controllers\\TurretWeaponController.cs",
+              "RelativeToolTip": "Scripts\\Enemy Weapon Controllers\\TurretWeaponController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T02:59:44.474Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -64,14 +81,14 @@
               "RelativeDocumentMoniker": "Scripts\\Enemy Weapon Controllers\\TankWeaponController.cs",
               "ToolTip": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\Enemy Weapon Controllers\\TankWeaponController.cs",
               "RelativeToolTip": "Scripts\\Enemy Weapon Controllers\\TankWeaponController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowDYAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-15T02:48:51.527Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "PlayerWeaponController.cs",
               "DocumentMoniker": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\PlayerWeaponController.cs",
               "RelativeDocumentMoniker": "Scripts\\PlayerWeaponController.cs",
@@ -79,24 +96,23 @@
               "RelativeToolTip": "Scripts\\PlayerWeaponController.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwA4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T02:00:43.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T02:00:43.391Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "BasicProjectile.cs",
               "DocumentMoniker": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\BasicProjectile.cs",
               "RelativeDocumentMoniker": "Scripts\\BasicProjectile.cs",
               "ToolTip": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\BasicProjectile.cs",
               "RelativeToolTip": "Scripts\\BasicProjectile.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-13T02:00:43.365Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "SceneInfo.cs",
               "DocumentMoniker": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\SceneInfo.cs",
               "RelativeDocumentMoniker": "Scripts\\SceneInfo.cs",
@@ -108,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "PlayerMaster.cs",
               "DocumentMoniker": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\PlayerMaster.cs",
               "RelativeDocumentMoniker": "Scripts\\PlayerMaster.cs",
@@ -120,32 +136,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "ProjectileBase.cs",
               "DocumentMoniker": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\ProjectileBase.cs",
               "RelativeDocumentMoniker": "Scripts\\ProjectileBase.cs",
               "ToolTip": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\ProjectileBase.cs",
               "RelativeToolTip": "Scripts\\ProjectileBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-13T02:00:43.409Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "GameManager.cs",
               "DocumentMoniker": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Scripts\\GameManager.cs",
               "ToolTip": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Scripts\\GameManager.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAwwB0AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T02:00:43.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T02:00:43.397Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "CharacterMotor.cs",
               "DocumentMoniker": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\CharacterMotor.cs",
               "RelativeDocumentMoniker": "Scripts\\CharacterMotor.cs",
@@ -153,24 +168,23 @@
               "RelativeToolTip": "Scripts\\CharacterMotor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T02:00:43.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T02:00:43.399Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Weapon.cs",
               "DocumentMoniker": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\Weapon.cs",
               "RelativeDocumentMoniker": "Scripts\\Weapon.cs",
               "ToolTip": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\Weapon.cs",
               "RelativeToolTip": "Scripts\\Weapon.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-13T02:00:43.401Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Global.cs",
               "DocumentMoniker": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\Global.cs",
               "RelativeDocumentMoniker": "Scripts\\Global.cs",
@@ -182,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Node2DEditorDrawer.cs",
               "DocumentMoniker": "D:\\Game Development (Team)\\HCTS-Revival-Jam-2025\\hcts-tank-game\\Scripts\\Node2DEditorDrawer.cs",
               "RelativeDocumentMoniker": "Scripts\\Node2DEditorDrawer.cs",
